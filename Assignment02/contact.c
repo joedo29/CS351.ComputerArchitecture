@@ -10,6 +10,13 @@
 #include <time.h>
 #include <stdlib.h>
 
+// How to construct a structure in C
+// https://www.tutorialspoint.com/cprogramming/c_structures.htm
+struct date{
+  int month;
+  int day;
+  int year;
+}
 // This function will calculate current age
 int calculateAge(int current_date, int current_month, int current_year, int birth_date, int birth_month, int birth_year){
     // days of every month
@@ -27,6 +34,7 @@ int calculateAge(int current_date, int current_month, int current_year, int birt
 }
 
 int main(){
+  struct date date1;
   // Get current time
   time_t t = time(NULL);
   struct tm tm = *localtime(&t);

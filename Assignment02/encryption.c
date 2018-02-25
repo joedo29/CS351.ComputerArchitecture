@@ -57,15 +57,16 @@ int main(){
 
   printf("Encrypted text: " );
 
+// Encryption begin
   for(int i = 0; i < strlen(word); i++){
-    if(isupper(word[i])){ // if input is lowercase, run this
+    if(isupper(word[i])){ // if input is uppercase, run this
       for(int j = 0; j < 26; j++){
         if(word[i] == uppercase[j]){
-          word[i] = uppercase[(j + number) % 26]; // treat it as a cicular array
+          word[i] = uppercase[(j + number) % 26]; // treat it as a circular array
           break;
         }
       }
-    } else{ // if input is uppercase, run this
+    } else{ // if input is lowercase, run this
       for(int j = 0; j < 26; j++){
         if(word[i] == lowercase[j]){
           word[i] = lowercase[(j + number) % 26];
